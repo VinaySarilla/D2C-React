@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Setting from "./components/Setting";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="design1">
+        <div className="container">
+          <div className="row">
+            <div
+              className="col-3"
+              style={{ backgroundColor: "white", borderRadius: "15px 0 0 15px" }}
+            >
+              <Navbar />
+            </div>
+            <div
+              className="col-6"
+              style={{ backgroundColor: "rgb(255 243 255)" }}
+            >
+              <Switch>
+                <Route path="/home">
+                  <Home />
+                </Route>
+                <Route path="/setting">
+                  <Setting />
+                </Route>
+              </Switch>
+            </div>
+            <div
+              className="col-3"
+              style={{
+                backgroundColor: "hsl(313deg 100% 96%)",
+                borderRadius: "0 15px 15px 0",
+              }}
+            >
+              <h1>Helloright</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
