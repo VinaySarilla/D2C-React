@@ -19,7 +19,7 @@ const baseVariants = {
     }
   },
 };
-export default function Home() {
+export default function Contact() {
   return (
     <motion.div
       variants={baseVariants}

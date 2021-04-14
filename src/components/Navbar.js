@@ -47,7 +47,7 @@ export default function Navbar() {
             role="tab"
             aria-controls="v-pills-home"
             aria-selected="true"
-            onClick={() => history.push("/home")}
+            onClick={() => history.push("/")}
           >
             <FontAwesomeIcon icon={faHome} style={{ marginRight: 15 }} />
             Home
@@ -61,9 +61,10 @@ export default function Navbar() {
             role="tab"
             aria-controls="v-pills-profile"
             aria-selected="false"
+            onClick={() => history.push("/projects")}
           >
             <FontAwesomeIcon icon={faUserAlt} style={{ marginRight: 15 }} />
-            Profile
+            Projects
           </button>
           <button
             class="nav-link "
@@ -74,9 +75,10 @@ export default function Navbar() {
             role="tab"
             aria-controls="v-pills-messages"
             aria-selected="false"
+            onClick={() => history.push("/technologies")}
           >
             <FontAwesomeIcon icon={faPaperPlane} style={{ marginRight: 15 }} />
-            Messages
+            Technologies
           </button>
           <button
             class="nav-link"
@@ -87,11 +89,11 @@ export default function Navbar() {
             role="tab"
             aria-controls="v-pills-settings"
             aria-selected="false"
-            onClick={() => history.push("/setting")}
+            onClick={() => history.push("/contact")}
 
           >
             <FontAwesomeIcon icon={faCog} style={{ marginRight: 15 }} />
-            Settings
+            Contact
           </button>
         </div>
       </div>
